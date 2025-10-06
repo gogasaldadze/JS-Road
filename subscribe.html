@@ -6,6 +6,10 @@
     <title>Document</title>
 
     <style> 
+        body {
+            font-family: arial;
+            
+        }
         .subscribe-button {
             border: none;
             background-color: black;
@@ -14,6 +18,10 @@
             font-weight: bold;
             border-radius: 25px;
             cursor: pointer;
+        }
+
+        .cs-button {
+            background-color: grey;
         }
     </style>
 </head>
@@ -26,11 +34,13 @@
         function subscribe() {
             if (buttonElement.innerHTML === 'Subscribe') {
             buttonElement.innerHTML = 'Subscribed';
+            buttonElement.classList.add('cs-button')
                
 
         }
             else {
                 buttonElement.innerHTML ='Subscribe';
+                buttonElement.classList.remove('cs-button')
             }
 
         }
