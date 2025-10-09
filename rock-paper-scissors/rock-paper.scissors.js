@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Functions</title>
-</head>
-<body >
-    <p>Rock Paper Scissors </p>
-<button onclick="play('rock')">rock</button>
-<button onclick="play('paper')">paper</button>
-<button onclick="play('scissors')">scissors</button>
-
-<p class="js-result"></p>
-<p class="js-moves"></p>
-<p class="js-score"> </p>
-<button onclick="resetScore()"> reset</button>
-
-    <script>
 
         
         let track = JSON.parse(localStorage.getItem('track')) || { win: 0, lose: 0, tie: 0 };
@@ -65,8 +46,7 @@
 
             updateScoreElement()
             document.querySelector('.js-result').innerHTML = result
-            document.querySelector('.js-moves').innerHTML = `You picked ${playerMove}. computer picked ${computerMove} `
-
+            document.querySelector('.js-moves').innerHTML = `You <img src ="images/${playerMove}-emoji.png" class = "icon">  <img src="images/${computerMove}-emoji.png" class=icon> computer `;
 
 
         }
@@ -80,7 +60,3 @@
 
 
         
-    </script>
-    
-</body>
-</html>
